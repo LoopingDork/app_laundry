@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+body{
+  font-family: "Quicksand";
+}
+.modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,0.2);
+}
+.modal:target{
+  position: absolute;
+  display: table;
+}
+
+.modal-dialog{
+  display: table-cell;
+  vertical-align: middle;
+}
+.modal-dialog .modal-content{
+  margin: auto;
+  position: relative;
+  background: #f1f1f1;
+  width: 80%;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.4);  
+  animation: animate-modal 0.5s;
+  z-index: 1;
+}
+.closeBtn{
+  float: right;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+.closeBtn:hover,
+.closeBtn:focus{
+  color: blue;
+}
+.containers{
+  padding: 8px 16px;
+}
+header{
+  background-color: #04AA6F;
+  color: white;
+  font-size: 40px;
+}
+footer{
+  background-color: #04AA6F;
+  color: white;
+  font-size: 20px;
+}
+.tabmenu{
+  position: relative;
+}
+li a {
+  padding: 16px ;
+}
+.tabmenu div{
+  display: none;
+}
+.tabmenu div:target{
+  display: block;
+}
+@keyframes animate-modal{
+  from{
+    top: -100px;
+    opacity: 0;
+  }
+  to{
+    top: 0;
+    opacity: 1;
+  }
+}
